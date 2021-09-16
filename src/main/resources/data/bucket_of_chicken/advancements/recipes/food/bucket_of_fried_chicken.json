@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "bucket_of_chicken:bucket_of_fried_chicken"
+    ]
+  },
+  "criteria": {
+    "has_bucket_of_chicken": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bucket_of_chicken:bucket_of_chicken"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "bucket_of_chicken:bucket_of_fried_chicken"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_bucket_of_chicken",
+      "has_the_recipe"
+    ]
+  ]
+}

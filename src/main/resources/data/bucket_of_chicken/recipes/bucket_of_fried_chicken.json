@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "bucket_of_chicken:bucket_of_chicken"
+  },
+  "result": "bucket_of_chicken:bucket_of_fried_chicken",
+  "experience": 0.35,
+  "cookingtime": 200
+}
