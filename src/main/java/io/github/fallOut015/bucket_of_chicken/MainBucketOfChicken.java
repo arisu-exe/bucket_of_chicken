@@ -1,6 +1,8 @@
 package io.github.fallOut015.bucket_of_chicken;
 
+import io.github.fallOut015.bucket_of_chicken.world.item.BucketOfChickenItem;
 import io.github.fallOut015.bucket_of_chicken.world.item.ItemsBucketOfChicken;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -28,8 +30,11 @@ public class MainBucketOfChicken {
             boolean isHoldingBucket = entityInteractEvent.getPlayer().getItemInHand(entityInteractEvent.getHand()).is(Items.BUCKET);
 
             if(isChicken && isHoldingBucket) {
-                entityInteractEvent.getPlayer().setItemInHand(entityInteractEvent.getHand(), new ItemStack(ItemsBucketOfChicken.BUCKET_OF_CHICKEN.get()));
+                ItemStack bucketOfChicken = new ItemStack(ItemsBucketOfChicken.BUCKET_OF_CHICKEN.get());
+                BucketOfChickenItem.setNBTData(bucketOfChicken, entityInteractEvent.getTarget());
+                entityInteractEvent.getPlayer().setItemInHand(entityInteractEvent.getHand(), bucketOfChicken);
                 entityInteractEvent.getTarget().discard();
+                entityInteractEvent.getPlayer().playSound(SoundEvents.CHICKEN_HURT, 1.0f, 1.0f);
             }
         }
     }

@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:story/smelt_iron",
+  "display": {
+    "icon": {
+      "item": "minecraft:bucket"
+    },
+    "title": {
+      "translate": "advancements.story.eat_bucket_of_fried_chicken.title"
+    },
+    "description": {
+      "translate": "advancements.story.eat_bucket_of_fried_chicken.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "rewards": {
+    "experience": 50
+  },
+  "criteria": {
+    "bucket_of_fried_chicken": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "bucket_of_chicken:bucket_of_fried_chicken"
+          ]
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "bucket_of_fried_chicken"
+    ]
+  ]
+}

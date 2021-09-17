@@ -1,4 +1,8 @@
 {
   "item.bucket_of_chicken.bucket_of_chicken" : "Bucket of Chicken",
-  "item.bucket_of_chicken.bucket_of_fried_chicken" : "Bucket of Fried Chicken"
+  "item.bucket_of_chicken.bucket_of_fried_chicken" : "Bucket of Fried Chicken",
+  "item.bucket_of_chicken.bucket_of_chicken_with_name" : "Bucket of ",
+
+  "advancements.story.eat_bucket_of_fried_chicken.title" : "Finger Looking Good",
+  "advancements.story.eat_bucket_of_fried_chicken.description" : "Cook a Bucket of Chicken and eat it"
 }
